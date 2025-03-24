@@ -1,0 +1,118 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:  #394135;
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.form-container {
+    background: rgba(195, 209, 170, 0.721);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 40%;
+    text-align: center;
+}
+
+
+h2 {
+    font-size: 26px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 18px;
+    color: rgb(27, 28, 25);
+    margin-bottom: 15px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 15px; /* Added space between inputs */
+}
+
+input:focus {
+    background: white;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Error Messages */
+.error-messages {
+    background: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background: linear-gradient(135deg, #28a745, #1e7e34);
+    color: white;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #1e7e34, #145823);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+p {
+    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+p a {
+    color: yellow;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+p a:hover {
+    text-decoration: underline;
+    color: #ffeb3b;
+}
+
+
+@media (max-width: 400px) {
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+}

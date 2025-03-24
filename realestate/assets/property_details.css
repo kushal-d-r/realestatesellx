@@ -1,0 +1,157 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #9d9d9d;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+
+.property-container {
+    width: 60%; 
+    background: #a4c9da;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    height: fit-content;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px; 
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+}
+
+
+.image-section {
+    flex: 1; 
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    max-height: 300px; 
+    object-fit: cover; 
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+.details-section {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details-section h1 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.details-section p {
+    font-size: 16px;
+    color: #000000;
+    margin: 6px 0;
+    line-height: 1.6;
+}
+
+
+h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    gap: 12px;
+}
+
+
+.message-button, 
+.report-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 22px;
+    width: 95%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+
+.message-button {
+    background: linear-gradient(135deg, #28a745, #218838);
+    color: white;
+    box-shadow: 0 3px 6px rgba(40, 167, 69, 0.3);
+}
+
+.message-button:hover {
+    background: linear-gradient(135deg, #218838, #1e7e34);
+    box-shadow: 0 5px 10px rgba(40, 167, 69, 0.4);
+}
+
+
+.report-button {
+    background: linear-gradient(135deg, rgb(231, 77, 77), darkred);
+    color: white;
+    box-shadow: 0 3px 6px rgba(231, 77, 77, 0.3);
+}
+
+.report-button:hover {
+    background: linear-gradient(135deg, darkred, rgb(190, 50, 50));
+    box-shadow: 0 5px 10px rgba(231, 77, 77, 0.4);
+}
+
+
+.footer {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    padding: 15px 0;
+    margin-top: 30px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+    .property-container {
+        width: 90%;
+        flex-direction: column; 
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    .image-section img {
+        max-height: 220px;
+    }
+}

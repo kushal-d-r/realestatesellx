@@ -1,0 +1,222 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdfffd;
+}
+
+header {
+    background-color:  #8eba5b;
+    color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 20px;
+    z-index: 1000;
+    height: 55px;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* No wrapping */
+}
+
+
+.site-title {
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+
+.header-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+
+button {
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #4b7fb7;
+    transition: background-color 0.2s ease-in-out;
+}
+
+
+.add-property-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+.add-property-btn:hover {
+    background-color: #218838;
+}
+
+
+.messages-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.messages-btn:hover {
+    background-color: #0056b3;
+}
+
+
+.logout-btn {
+    background-color: #e1182c;
+    color: white;
+}
+
+.logout-btn:hover {
+    background-color: #f50920;
+}
+
+
+.content {
+    margin-top: 80px; 
+    padding: 20px;
+}
+
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+}
+
+
+.property-card {
+    background-color: rgb(186, 203, 194);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.property-card:hover {
+    transform: scale(1.05);
+}
+
+.property-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.favorite-btn, .delete-btn {
+    margin-top: 10px;
+}
+
+.favorite-btn {
+    background-color: #ffcc00;
+    color: black;
+}
+
+.favorite-btn:hover {
+    background-color: #e6b800;
+}
+
+
+.delete-btn {
+    background-color: #ff0000;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+
+.no-properties {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+/* Responsive Design - Keep Layout Fixed, Only Reduce Button Sizes */
+@media (max-width: 1200px) {
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+
+    /* Reduce Button Size but Keep Layout Same */
+    .nav-links li a,
+    button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .site-title {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .property-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 column for mobile */
+    }
+
+    
+    .nav-links li a,
+    button {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-title {
+        font-size: 20px;
+    }
+
+   
+    .nav-links li a,
+    button {
+        font-size: 10px;
+        padding: 5px 8px;
+    }
+}
